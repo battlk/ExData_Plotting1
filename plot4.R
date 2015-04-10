@@ -3,7 +3,7 @@ subset <- data[data$Date %in% c("1/2/2007", "2/2/2007"),]
 
 date <- strptime(paste(subset$Date, subset$Time, sep=" "), "%d/%m/%Y %H:%M:%S") 
 
-png("plot4.png")
+png("plot4.png", width=480, height=480)
 par(mfrow = c(2, 2)) 
 
 plot(date, as.numeric(subset$Global_active_power), xlab="", ylab="Global Active Power", type="l", cex=0.2)
